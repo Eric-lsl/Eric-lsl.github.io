@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="今天我们来学习下C++中的if和else语句。">
+<meta name="description" content="今天，我们来学习C++中的switch语句。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++中的if与else语句">
-<meta property="og:url" content="http://yoursite.com/2019/03/13/【基础知识3】C++中的if与else语句/index.html">
+<meta property="og:title" content="C++中的switch语句">
+<meta property="og:url" content="http://yoursite.com/2019/03/15/test/index.html">
 <meta property="og:site_name" content="Eric&#39;s Blog">
-<meta property="og:description" content="今天我们来学习下C++中的if和else语句。">
+<meta property="og:description" content="今天，我们来学习C++中的switch语句。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/Eric-lsl/Eric-lsl.github.io/master/images/公众号二维码.jpg#pic_center">
-<meta property="og:updated_time" content="2019-03-13T15:48:52.358Z">
+<meta property="og:updated_time" content="2019-03-15T13:09:43.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++中的if与else语句">
-<meta name="twitter:description" content="今天我们来学习下C++中的if和else语句。">
+<meta name="twitter:title" content="C++中的switch语句">
+<meta name="twitter:description" content="今天，我们来学习C++中的switch语句。">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Eric-lsl/Eric-lsl.github.io/master/images/公众号二维码.jpg#pic_center">
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/13/【基础知识3】C++中的if与else语句/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/15/test/">
 
 
 
 
 
-  <title>C++中的if与else语句 | Eric's Blog</title>
+  <title>C++中的switch语句 | Eric's Blog</title>
   
 
 
@@ -234,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/【基础知识3】C++中的if与else语句/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/15/test/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eric">
@@ -251,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C++中的if与else语句</h1>
+          <h1 class="post-title" itemprop="name headline">C++中的switch语句</h1>
         
 
         <div class="post-meta">
@@ -263,8 +263,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-13T23:01:13+08:00">
-                2019-03-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-15T20:24:05+08:00">
+                2019-03-15
               </time>
             
 
@@ -301,30 +301,24 @@
       
 
       
-        <p>今天我们来学习下C++中的if和else语句。<a id="more"></a></p>
-<h2 id="说个明白"><a href="#说个明白" class="headerlink" title="说个明白"></a>说个明白</h2><p>先从最简单的说起。</p>
-<p><strong>if语句</strong><br>if语句是C++中最简单的判断语句。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(S)</span><br><span class="line">    // 语句1</span><br><span class="line">// 语句2</span><br></pre></td></tr></table></figure></p>
-<p>如果S为真（非零），则执行语句1，否则执行语句2。</p>
-<p>如果语句1就是单个语句，则可以这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if(S)</span><br><span class="line">    语句1; // 这里的分号不能少</span><br></pre></td></tr></table></figure></p>
-<p>或者这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(S)&#123;</span><br><span class="line">    语句1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果语句1是个复合语句，则应该这么写:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(S)&#123;</span><br><span class="line">    语句1;</span><br><span class="line">    语句2;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>if-else语句</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(S)&#123;</span><br><span class="line">    语句1;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    语句2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>if-else语句也是C++中的判断语句，如果S为真（非零），则执行语句1，否则执行语句2。<br>也就是说，程序运行到if-else语句，必然要执行其中一个语句，且只执行其中一个语句。</p>
+        <p>今天，我们来学习C++中的switch语句。<a id="more"></a>在英语里，switch就是“开关”的意思，开灯关灯那个开关，所以switch语句也称为开关语句。<br>switch语句是一种多分支选择控制语句，功能和if-else-if语句差不多。</p>
+<h2 id="标准样子"><a href="#标准样子" class="headerlink" title="标准样子"></a>标准样子</h2><p>来看看一个标准的switch语句的样子：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式)&#123;</span><br><span class="line">    <span class="keyword">case</span> 值<span class="number">1</span>:</span><br><span class="line">        语句<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> 值<span class="number">2</span>:</span><br><span class="line">        语句<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    ... ...</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        语句n;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>它表示什么意思呢？<br>首先计算表达式的值，当然也有可能直接就是一个值。<br>如果表达式的值等于值1，则执行语句1，然后退出switch语句；<br>如果表达式的值等于值2，则执行语句2，然后退出switch语句；<br>······<br>如果表达式的值与任何一个case后面的值都不同，则执行语句n，然后退出switch语句。</p>
+<p>所以，switch语句就类似于if-else-if语句。</p>
+<p>举个小栗子：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c = <span class="string">'a'</span>;</span><br><span class="line"><span class="keyword">switch</span> (c)&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"我是a\n"</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"我是b\n"</span>);        </span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"我是c\n"</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"我没有身份哦\n"</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>输出结果自然就是</p>
 <blockquote>
-<p>语句1和语句2可以是单个语句，也可以是复合语句。</p>
+<p>我是a</p>
 </blockquote>
-<p><strong>if-else-if语句</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if(S1)&#123;</span><br><span class="line">    语句1;</span><br><span class="line">&#125;else if(S2)&#123;</span><br><span class="line">    语句2；</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    语句3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果S1为真（非零），则执行语句1；否则判断S2，如果S2为真，则执行语句2，否则执行语句3。<br>也就是说，程序运行到if-else-if语句，必然要执行其中一个语句，且只执行其中一个语句。</p>
+<h2 id="去掉某些break"><a href="#去掉某些break" class="headerlink" title="去掉某些break"></a>去掉某些break</h2><p>如果我们在编程的时候，遗漏了某个case后面的break，会有什么后果呢？<br>比如这样：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c = <span class="string">'a'</span>;</span><br><span class="line"><span class="keyword">switch</span> (c)&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"我是a\n"</span>);        </span><br><span class="line"><span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"我是b\n"</span>);        </span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"我是c\n"</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"我没有身份哦\n"</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>没错，就是程序会一直朝下执行，直到遇到break退出switch语句。<br>上面的输出就是</p>
 <blockquote>
-<p>语句1、语句2、语句3可以是单个语句，也可以是复合语句。</p>
+<p>我是a<br>我是b</p>
 </blockquote>
-<p>if-else-if语句是可以嵌套的，比如这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if(S1)&#123;</span><br><span class="line">    语句1;</span><br><span class="line">&#125;else if(S2)&#123;</span><br><span class="line">    语句2；</span><br><span class="line">&#125;else if(S3)&#123;</span><br><span class="line">    语句3;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">else&#123;</span><br><span class="line">    语句n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>中间可以接任意多个else-if语句。</p>
-<h2 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h2><p>假定有个系统，你输入年龄，它判断你处在童年、少年、青年、中年和老年。那么用if和else语句该怎么实现呢？<br>其实也很简单，就是这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">int age; // 表示你的年龄</span><br><span class="line">if(age&lt;6)&#123;</span><br><span class="line">    cout&lt;&lt;&quot;现在是你的童年时期&quot;;</span><br><span class="line">&#125;else if(age&lt;17)&#123;</span><br><span class="line">    cout&lt;&lt;&quot;现在是你的少年时期&quot;;</span><br><span class="line">&#125;else if(age&lt;40)&#123;</span><br><span class="line">    cout&lt;&lt;&quot;现在是你的青年时期&quot;;</span><br><span class="line">&#125;else if(age&lt;65)&#123;</span><br><span class="line">    cout&lt;&lt;&quot;现在是你的中年时期&quot;;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    cout&lt;&lt;&quot;现在是你的老年时期&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>当然，这里的年龄划分各有各的标准，重点要放在if和else语句如何使用呀。</p>
+<p>如果对应的case语句本身及其后面没有break，那就从case语句开始一直执行到switch语句最后，然后退出switch语句。</p>
+<h2 id="去掉default"><a href="#去掉default" class="headerlink" title="去掉default"></a>去掉default</h2><p>是不是这个default必须要有呢，能不能去掉？答案是肯定的。</p>
+<h2 id="跟if-else-if语句的联系"><a href="#跟if-else-if语句的联系" class="headerlink" title="跟if-else-if语句的联系"></a>跟if-else-if语句的联系</h2><p>其实，任何一个switch语句都可以改写成if-else-if语句。<br>不信？咱试试！<br>标准的switch语句可以改成这个样子：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式==值<span class="number">1</span>)&#123;</span><br><span class="line">    语句<span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(表达式==值<span class="number">2</span>)&#123;</span><br><span class="line">    语句<span class="number">2</span>;</span><br><span class="line">&#125;...</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    语句n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>但是，不是任何一个if-else-if语句都可以随意改成switch语句的:-)</p>
 <p>~over~</p>
 <p>欢迎关注公众号<code>晓世编程</code>，获取最新文章！<br><img src="https://raw.githubusercontent.com/Eric-lsl/Eric-lsl.github.io/master/images/公众号二维码.jpg#pic_center" alt="Alt 晓世编程"></p>
 <font size="2">晓世编程，由清华在校生创办，旨在传播编程知识，让编程改变你我，改变世界。目前专注于C++知识传播。</font>
@@ -351,8 +345,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/12/【基础知识2】C++中的条件表达式/" rel="next" title="C++中的条件表达式">
-                <i class="fa fa-chevron-left"></i> C++中的条件表达式
+              <a href="/2019/03/13/【基础知识3】C++中的if与else语句/" rel="next" title="C++中的if与else语句">
+                <i class="fa fa-chevron-left"></i> C++中的if与else语句
               </a>
             
           </div>
@@ -360,10 +354,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/15/test/" rel="prev" title="C++中的switch语句">
-                C++中的switch语句 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -477,7 +467,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说个明白"><span class="nav-number">1.</span> <span class="nav-text">说个明白</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举个栗子"><span class="nav-number">2.</span> <span class="nav-text">举个栗子</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标准样子"><span class="nav-number">1.</span> <span class="nav-text">标准样子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去掉某些break"><span class="nav-number">2.</span> <span class="nav-text">去掉某些break</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去掉default"><span class="nav-number">3.</span> <span class="nav-text">去掉default</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跟if-else-if语句的联系"><span class="nav-number">4.</span> <span class="nav-text">跟if-else-if语句的联系</span></a></li></ol></div>
             
 
           </div>
